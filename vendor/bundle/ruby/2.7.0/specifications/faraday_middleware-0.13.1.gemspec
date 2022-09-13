@@ -12,10 +12,10 @@ Gem::Specification.new do |s|
   s.email = ["sferik@gmail.com".freeze, "wynn.netherland@gmail.com".freeze]
   s.homepage = "https://github.com/lostisland/faraday_middleware".freeze
   s.licenses = ["MIT".freeze]
-  s.rubygems_version = "3.3.3".freeze
+  s.rubygems_version = "3.1.6".freeze
   s.summary = "Various middleware for Faraday".freeze
 
-  s.installed_by_version = "3.3.3" if s.respond_to? :installed_by_version
+  s.installed_by_version = "3.1.6" if s.respond_to? :installed_by_version
 
   if s.respond_to? :specification_version then
     s.specification_version = 4

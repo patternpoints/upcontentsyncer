@@ -14,10 +14,10 @@ Gem::Specification.new do |s|
   s.homepage = "https://github.com/locomotivecms/coal".freeze
   s.licenses = ["MIT".freeze]
   s.required_ruby_version = Gem::Requirement.new(">= 2.0".freeze)
-  s.rubygems_version = "3.3.3".freeze
+  s.rubygems_version = "3.1.6".freeze
   s.summary = "The LocomotiveCMS Coal is the API ruby client for the LocomotiveCMS platform".freeze
 
-  s.installed_by_version = "3.3.3" if s.respond_to? :installed_by_version
+  s.installed_by_version = "3.1.6" if s.respond_to? :installed_by_version
 
   if s.respond_to? :specification_version then
     s.specification_version = 4
