@@ -1,0 +1,270 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://localhost:3000/locomotive/api/v3/tokens.json
+    body:
+      encoding: UTF-8
+      string: email=admin%40locomotivecms.com&password=locomotive
+    headers:
+      User-Agent:
+      - Faraday v0.15.4
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip,deflate
+      Date:
+      - Sun, 17 Nov 2019 16:39:30 GMT
+      Content-Type:
+      - application/x-www-form-urlencoded
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '32'
+      Connection:
+      - keep-alive
+      Status:
+      - 201 Created
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Etag:
+      - W/"410e3d6fde24f39257a7cc619b61baa7"
+      X-Runtime:
+      - '0.007373'
+      X-Request-Id:
+      - 73541990-4387-4340-b0c9-6eef9f2907a1
+      Date:
+      - Sun, 17 Nov 2019 16:39:30 GMT
+      X-Powered-By:
+      - Phusion Passenger 6.0.4
+      Server:
+      - nginx/1.17.3 + Phusion Passenger 6.0.4
+    body:
+      encoding: UTF-8
+      string: '{"token":"bzwAyFQzcchf_hgDQhz3"}'
+    http_version: 
+  recorded_at: Sun, 17 Nov 2019 16:39:30 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/locomotive/sample/api/v3/theme_assets.json?auth_token=bzwAyFQzcchf_hgDQhz3
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.15.4
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip,deflate
+      Date:
+      - Sun, 17 Nov 2019 16:39:30 GMT
+      X-Locomotive-Account-Email:
+      - admin@locomotivecms.com
+      X-Locomotive-Account-Token:
+      - bzwAyFQzcchf_hgDQhz3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '2'
+      Connection:
+      - keep-alive
+      Status:
+      - 200 OK
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Etag:
+      - W/"4f53cda18c2baa0c0354bb5f9a3ecbe5"
+      X-Runtime:
+      - '0.022248'
+      X-Request-Id:
+      - 70862d22-507d-486f-ac94-9ce5a4399d00
+      Date:
+      - Sun, 17 Nov 2019 16:39:30 GMT
+      X-Powered-By:
+      - Phusion Passenger 6.0.4
+      Server:
+      - nginx/1.17.3 + Phusion Passenger 6.0.4
+    body:
+      encoding: UTF-8
+      string: "[]"
+    http_version: 
+  recorded_at: Sun, 17 Nov 2019 16:39:30 GMT
+- request:
+    method: post
+    uri: http://localhost:3000/locomotive/sample/api/v3/theme_assets.json
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        LS0tLS0tLS0tLS0tLVJ1YnlNdWx0aXBhcnRQb3N0LTM0ZDI0NWRkYzdhZTFkYmY0Nzk4YTRmM2IxZWVhZTA0DQpDb250ZW50LURpc3Bvc2l0aW9uOiBmb3JtLWRhdGE7IG5hbWU9InRoZW1lX2Fzc2V0W3NvdXJjZV0iOyBmaWxlbmFtZT0icmFpbHMucG5nIg0KQ29udGVudC1MZW5ndGg6IDc0ODUNCkNvbnRlbnQtVHlwZTogaW1hZ2UvcG5nDQpDb250ZW50LVRyYW5zZmVyLUVuY29kaW5nOiBiaW5hcnkNCg0KiVBORw0KGgoAAAANSUhEUgAAADIAAABACAYAAABY1SR7AAAAAXNSR0IArs4c6QAAActpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IlhNUCBDb3JlIDUuNC4wIj4KICAgPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4KICAgICAgPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIKICAgICAgICAgICAgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIgogICAgICAgICAgICB4bWxuczp0aWZmPSJodHRwOi8vbnMuYWRvYmUuY29tL3RpZmYvMS4wLyI+CiAgICAgICAgIDx4bXA6Q3JlYXRvclRvb2w+QWRvYmUgSW1hZ2VSZWFkeTwveG1wOkNyZWF0b3JUb29sPgogICAgICAgICA8dGlmZjpPcmllbnRhdGlvbj4xPC90aWZmOk9yaWVudGF0aW9uPgogICAgICA8L3JkZjpEZXNjcmlwdGlvbj4KICAgPC9yZGY6UkRGPgo8L3g6eG1wbWV0YT4KKS7NPQAAGyBJREFUaAWlmgmUpFV1x2/VV3tVd1fvM9PdszMryzDIjo6cAAJREOORMweM29GIJ/GYEzCaiCYaxQUjQohionhQ0QNBETEmioAIjKzDzDAbyyzdM93T+1pde1V+//dV9fQAEoHX/dW3vXff3e99932Bqxu7rdYC1apdWjX7q0DATg2YhXjO7dGmmwAvq3R8WXuFR8f0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
+    headers:
+      User-Agent:
+      - Faraday v0.15.4
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip,deflate
+      Date:
+      - Sun, 17 Nov 2019 16:39:30 GMT
+      X-Locomotive-Account-Email:
+      - admin@locomotivecms.com
+      X-Locomotive-Account-Token:
+      - bzwAyFQzcchf_hgDQhz3
+      Content-Type:
+      - multipart/form-data; boundary=-----------RubyMultipartPost-34d245ddc7ae1dbf4798a4f3b1eeae04
+      Content-Length:
+      - '8060'
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '365'
+      Connection:
+      - keep-alive
+      Status:
+      - 201 Created
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Etag:
+      - W/"fcecd6cea6a407ab13853b4489702a79"
+      X-Runtime:
+      - '0.191078'
+      X-Request-Id:
+      - f5a18b7c-29a8-4f48-9058-5c7453526bd3
+      Date:
+      - Sun, 17 Nov 2019 16:39:30 GMT
+      X-Powered-By:
+      - Phusion Passenger 6.0.4
+      Server:
+      - nginx/1.17.3 + Phusion Passenger 6.0.4
+    body:
+      encoding: UTF-8
+      string: '{"_id":"5dd177c2a95330aa17f8f8de","created_at":"2019-11-17T16:39:30Z","updated_at":"2019-11-17T16:39:30Z","content_type":"image","local_path":"images/footer/rails.png","folder":"images/footer","checksum":"933d32a3720db54b73003ba10a876eec","filename":"rails.png","url":"/sites/5dd1779ca95330a94bf72542/theme/images/footer/rails.png","size":"7.31
+        KB","raw_size":7485}'
+    http_version: 
+  recorded_at: Sun, 17 Nov 2019 16:39:30 GMT
+- request:
+    method: put
+    uri: http://localhost:3000/locomotive/sample/api/v3/theme_assets/5dd177c2a95330aa17f8f8de.json
+    body:
+      encoding: UTF-8
+      string: auth_token=bzwAyFQzcchf_hgDQhz3&theme_asset%5Bfolder%5D=header
+    headers:
+      User-Agent:
+      - Faraday v0.15.4
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip,deflate
+      Date:
+      - Sun, 17 Nov 2019 16:39:30 GMT
+      X-Locomotive-Account-Email:
+      - admin@locomotivecms.com
+      X-Locomotive-Account-Token:
+      - bzwAyFQzcchf_hgDQhz3
+      Content-Type:
+      - application/x-www-form-urlencoded
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Status:
+      - 200 OK
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Etag:
+      - W/"5a6f2d10ff28aba112e27681eb8edb0c"
+      X-Runtime:
+      - '0.051733'
+      X-Request-Id:
+      - 99725cd9-e075-4140-abab-ef8ffa404a2f
+      Date:
+      - Sun, 17 Nov 2019 16:39:30 GMT
+      X-Powered-By:
+      - Phusion Passenger 6.0.4
+      Server:
+      - nginx/1.17.3 + Phusion Passenger 6.0.4
+      Content-Encoding:
+      - gzip
+    body:
+      encoding: UTF-8
+      string: '{"_id":"5dd177c2a95330aa17f8f8de","created_at":"2019-11-17T16:39:30Z","updated_at":"2019-11-17T16:39:30Z","content_type":"image","local_path":"images/header/rails.png","folder":"images/header","checksum":"933d32a3720db54b73003ba10a876eec","filename":"rails.png","url":"/sites/5dd1779ca95330a94bf72542/theme/images/header/rails.png","size":"7.31
+        KB","raw_size":7485}'
+    http_version: 
+  recorded_at: Sun, 17 Nov 2019 16:39:30 GMT
+- request:
+    method: delete
+    uri: http://localhost:3000/locomotive/sample/api/v3/theme_assets/5dd177c2a95330aa17f8f8de.json?auth_token=bzwAyFQzcchf_hgDQhz3
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.15.4
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip,deflate
+      Date:
+      - Sun, 17 Nov 2019 16:39:30 GMT
+      X-Locomotive-Account-Email:
+      - admin@locomotivecms.com
+      X-Locomotive-Account-Token:
+      - bzwAyFQzcchf_hgDQhz3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Status:
+      - 200 OK
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Etag:
+      - W/"5a6f2d10ff28aba112e27681eb8edb0c"
+      X-Runtime:
+      - '0.025086'
+      X-Request-Id:
+      - 18efa8d5-c3b9-4eee-8abd-2c87d9e41dfc
+      Date:
+      - Sun, 17 Nov 2019 16:39:30 GMT
+      X-Powered-By:
+      - Phusion Passenger 6.0.4
+      Server:
+      - nginx/1.17.3 + Phusion Passenger 6.0.4
+      Content-Encoding:
+      - gzip
+    body:
+      encoding: UTF-8
+      string: '{"_id":"5dd177c2a95330aa17f8f8de","created_at":"2019-11-17T16:39:30Z","updated_at":"2019-11-17T16:39:30Z","content_type":"image","local_path":"images/header/rails.png","folder":"images/header","checksum":"933d32a3720db54b73003ba10a876eec","filename":"rails.png","url":"/sites/5dd1779ca95330a94bf72542/theme/images/header/rails.png","size":"7.31
+        KB","raw_size":7485}'
+    http_version: 
+  recorded_at: Sun, 17 Nov 2019 16:39:30 GMT
+recorded_with: VCR 4.0.0

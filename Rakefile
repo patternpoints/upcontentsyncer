@@ -1,5 +1,5 @@
 task default: :upcontent
 
-task :upcontent do
-  bundle exec './upcontentpoll.rb'
+task :upcontent_keiretsu do
+  bundle exec './upcontentpoll.rb keiretsu'
 end
